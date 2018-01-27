@@ -6,4 +6,4 @@
   <input type="text" name="search" />
   <input type="submit" name="search_submit" value=" Ieškoti " />
 </form>
-@stop
+@endsection
