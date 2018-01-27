@@ -10,30 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function() {
-	return view('home');
-});
-Route::get('degalines/{city_id?}', function($city_id) {
-	return view('search');
-});
-Route::get('degaline/{title}', function($title) {
-	return view('gasoline');
-});
-Route::get('apie', function() {
-	return view('about');
-});
-Route::get('kontaktai', function() {
-	return view('contact');
-});
+Route::get('/', 'HomeController@showWelcome');
+
+Route::get('gasolines/{city_id?}', 'SearchController@getSearch');
+Route::get('gasoline/{title}', 'GasolineController@getGasoline');
+Route::get('about', 'AboutController@showIndex');
+Route::get('contacts', 'ContactController@showIndex');
 
 Route::group(array('before' => 'auth'), function() {
-	Route::get('admin/degalines', function() {
-	  return view('admin.gasolines');
-	});
-	Route::get('admin/miestai', function() {
-	  return view('admin.cities');
-	});
-	Route::get('admin/degaliniu_tipai', function() {
-	  return view('admin.gasoline_types');
-	});
+	Route::resource('admin/gasolines', 'AdminGasolinesController');
+	Route::resource('admin/cities', 'AdminCitiesController');
+	Route::resource('admin/gasoline_types', 'AdminTypesController');
 });
