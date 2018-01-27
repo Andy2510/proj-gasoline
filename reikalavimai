@@ -1,0 +1,25 @@
+Funkcijų bus nedaug:
+
+Iš administravimo pusės: 
+Galimybė prisijungti su administratoriaus teisėmis
+Galimybė valdyti aikšteles - peržiūrėti, įvesti, redaguoti ir trinti
+Galimybė valdyti miestus
+Galimybė valdyti aikštelių tipus
+Iš išorės:
+Aikštelių žemėlapis pagal miestą
+Aikštelių paieška pagal adresą
+Konkrečios aikštelės duomenų peržiūra
+Statiniai puslapiai: "Apie projektą" ir "Kontaktai"
+Tačiau šių funkcijų pilnai užteks, kad galėtume paliesti svarbiausius Laravel aspektus ir juos pritaikyti praktikoje.
+
+Taigi, padarykime sąrašą visų skirtingų puslapių, kuriuos turės mūsų projektas:
+
+http://localhost/laravelcourse/public	pagrindinis puslapis - aikštelių žemėlapis ir paieškos forma
+http://localhost/laravelcourse/public/aiksteles/[paieškos_filtrai]	paieškos rezultatai
+http://localhost/laravelcourse/public/aikstele/[pavadinimas]	konkreti aikštelė
+http://localhost/laravelcourse/public/apie	informacija apie projektą
+http://localhost/laravelcourse/public/kontaktai	kontaktų forma
+http://localhost/laravelcourse/public/admin	prisijungimas administratoriui
+http://localhost/laravelcourse/public/admin/aiksteles	aikštelių valdymas
+http://localhost/laravelcourse/public/admin/miestai	miestų valdymas
+http://localhost/laravelcourse/public/admin/aiksteliu_tipai	aikštelių tipų valdymas
